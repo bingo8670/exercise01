@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  resources :group
+  resources :groups
   root 'groups#index'
 end
