@@ -7,4 +7,22 @@
   </div>
   <h2><%= @group.title %></h2>
   <p><%= @group.description %></p>
+    <table>
+      <thead>
+        <tr>
+          <th width= 50%>文章内容</th>
+          <th width= 30%>发表者</th>
+          <th width= 20%>发表时间</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @post.each do |post| %>
+        <tr>
+          <td><%= post.content %></td>
+          <td><%= post.user.email %></td>
+          <td><%= post.created_at %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
 </div>
